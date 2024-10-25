@@ -1,0 +1,57 @@
+.left_section{
+
+    width: 30%;
+}
+
+.font_size {
+    font-size: xx-small;
+}
+.category_box {
+    background-color:rgb(133 221 250 / 79%);
+}
+.main{
+    background-color: black;
+    color: white;
+    /* height:100vh; */
+}
+.font_color{
+    color: #ffffffab;
+}
+.small_box{
+    background-color: #0d6efd87;
+}
+.choice:hover{
+    border: 2px solid white;
+    background-color:#0d6efd87
+}
+.box1{
+        padding-top: 20%;
+        /* background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRONr62VpNniMytAwODPrQ5XTLEQPsqAylaLw&s"); */
+        /* background: url("https://thumbs.dreamstime.com/b/stack-four-silver-ethereum-classic-etc-coins-laying-black-background-stack-four-silver-ethereum-classic-etc-coins-104207301.jpg"); */
+        background-repeat:'noRepeat';
+        background-size: cover;
+        background-color: cadetblue;
+
+}
+.box2{
+    padding-top: 20%;
+        /* background:url("https://img.pikbest.com/ai/illus_our/20230427/c1f590b396423c5eca11e8ec940ffec2.jpg!w700wp"); */
+        background-repeat:'noRepeat';
+        background-size: cover;
+        background-color: cadetblue;
+
+}
+.image{
+    padding-top: 70%;
+}
+.image img{
+    height: 40vh;
+
+}
+
+.Graph{
+    margin-left: -45px;
+}
+.wallet-btn{
+    width: 10rem !important;
+}
