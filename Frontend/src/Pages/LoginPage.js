@@ -12,7 +12,7 @@ function LoginPage() {
         const data=new FormData();
         data.append("Email",email)
         data.append("password",password)
-        const Response=await axios.get("https://expense-tracker-backend-fkmn.onrender.com/"+email+"/"+password,data,{header:{"content-type":"multipart/form-data"}})
+        const Response=await axios.get("https://backend-tracker-u8jt.onrender.com/"+email+"/"+password,data,{header:{"content-type":"multipart/form-data"}})
  
         if(Response.data.status=='success'){
             SetUserData(localStorage.setItem("user_data",JSON.stringify(Response.data.data)))

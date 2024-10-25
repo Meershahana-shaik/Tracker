@@ -52,7 +52,7 @@ const Display = ({data1, Tbalance, design}) => {
          const data=new FormData();
         data.append("Balance",balance);
         data.append("userId",data1._id);
-        const Response=await axios.post("http://localhost:3008/display/"+data1._id+"/"+balance,data,{header:{"content-type":"multipart/form-data"}})
+        const Response=await axios.post("https://backend-tracker-u8jt.onrender.com/"+data1._id+"/"+balance,data,{header:{"content-type":"multipart/form-data"}})
         if(Response){
             if(Response.data.status==='success'){
             const updatedBudget = Response.data.wallet;

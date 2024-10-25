@@ -47,7 +47,7 @@ const AddNewTransactions = ({Tbudjet,data2,expenses_amount}) => {
             alert("Insufficient balance")
         }
         else{
-            const Response = await axios.post("https://expense-tracker-backend-fkmn.onrender.com" +data2._id+"/"+ amount + "/" + place + "/" + month + "/" + categoryValue, data, { header: { "content-type": "multipart/form-data" } })
+            const Response = await axios.post("https://backend-tracker-u8jt.onrender.com" +data2._id+"/"+ amount + "/" + place + "/" + month + "/" + categoryValue, data, { header: { "content-type": "multipart/form-data" } })
             if (Response) {
                 setShowPopup(true)
                 console.log(Response.data.updatedBalance);

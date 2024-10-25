@@ -13,7 +13,7 @@ const Budjet = ({data1}) => {
     const data = new FormData;
     data.append("Month", month)
     data.append("userId",data1._id)
-    const Response = await axios.post("http://localhost:3008/Budjet/"+data1._id+"/"+ month, data, { headers: { "content-type": "multipart/form_data" } })
+    const Response = await axios.post("https://backend-tracker-u8jt.onrender.com/"+data1._id+"/"+ month, data, { headers: { "content-type": "multipart/form_data" } })
     if (Response) {
       if(Response.data.status==='success'){
         const expensesData = Response.data.data;
