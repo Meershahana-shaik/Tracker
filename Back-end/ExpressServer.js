@@ -6,7 +6,6 @@ const cors=require('cors')
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb'); 
 const uri = "mongodb+srv://syedsumeera92:<sumeera123>@cluster0.igubn4o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-const port=process.env.PORT||3008;
 app.use(cors());
 const client = new MongoClient(uri, {
   serverApi: {
@@ -15,7 +14,7 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   }
 });
-app.listen(port, () => {
+app.listen(process.env.PORT||3008, () => {
 
 
   app.get('/login/:Email/:password', (req, res) => {
@@ -70,7 +69,6 @@ app.post("/display/:userId/:Balance", (req, res) => {
 
     const options = { returnDocument: 'after' };
     const result = await collection.findOneAndUpdate(filter, update, options);
-    // const expenses=result.wallet-result.Balance;
     if (result) {
       res.send({ status: 'success', wallet: result.wallet, Balance:result.Balance});
     } else {
